@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询页面</title>
+    <link rel="stylesheet" href="/static/dhcontent.css">
+</head>
+
+    <div class="a">通讯录查询系统</div>
+    <form action="{% url 'dhcontent' %}" method="post">
+    {% csrf_token %}
+        <div class="b"><label>请输入需要查询的姓名或者电话号码：</label></div>
+        <div class="c">
+        <input class="d" type="text" for="text" name="text">
+
+        </div>
+
+        <div class="e">
+            <input type="submit" value="提交" class="f">
+        </div>
+
+    </form>
+
+    <br/>
+    <br/>
+   <div style="text-align: center">
+        <h1>{{ name }}</h1>
+        <h2>{{ number }}</h2>
+       <h1>{{ erro }}</h1>
+   </div>
+    <div style="margin-top: 200px">
+        <a style="text-align: center ; color: darkgrey ;text-decoration:none;" href="{% url 'index' %}"><h1>返回博客</h1></a>
+    </div>
+<div style="text-align:center;margin:0 auto;padding:8px 0;width:100%;position:fixed;bottom:0;left:0;">
+<img src="/static/beian.png" height="18" width="20"> 滇ICP备18005620号</a> 
+</div>
+
+</body>
+</html>

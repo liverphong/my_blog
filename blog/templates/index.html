@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+{% block header %}
+ <div class="jumbotron" style="text-align: center">
+     <h1>Welcome to TF's Blog</h1>
+ </div>
+{% endblock header %}
+{% block content %}
+    <h2 style="text-align: center">
+        上善若水，厚德载物
+    </h2>
+    <a href="{% url 'dhcontent' %}">
+    <h3 style="text-align: center ;color: aqua" >
+        联系人查询系统入口
+    </h3>
+    </a>
+
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+ {% extends "base.html" %}
+    {% block header %}
+        <h1>主题</h1>
+    {% endblock header %}
+    {% block content %}
+        <ul>
+        {% for topic in topics %}
+            <li>
+                <h2>
+                    <a href="{% url 'topic' topic.id %}">{{ topic }}</a>
+                </h2>
+
+            </li>
+        {% empty %}
+            <li><h3>还没有添加主题</h3></li>
+        {% endfor %}
+        </ul>
+    {% endblock content %}

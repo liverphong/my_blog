@@ -1,0 +1,43 @@
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="=width=device-width, initial-scale=1">
+    <title>TF's Blog</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+<body style="background-color: cadetblue">
+
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                </button>
+                <a class="navbar-brand" href="{% url 'index' %}">博客首页</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{% url 'topics' %}">主题</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            {% block header %}{% endblock header %}
+        </div>
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+    </div>
+<div style="text-align:center;margin:0 auto;padding:8px 0;width:100%;position:fixed;bottom:0;left:0;">
+<img src="/static/beian.png" height="18" width="20"> 滇ICP备18005620号</a> 
+</div>
+
+</body>
+</html>
