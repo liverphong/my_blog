@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'blog',
     'dhcontent',
+    'dm',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,7 @@ TEMPLATES = [
         'DIRS': [os.path.join(BASE_DIR, 'templates'),
                   os.path.join(BASE_DIR, 'blog/templates'),
                   os.path.join(BASE_DIR, 'dhcontent/templates'),
+                  os.path.join(BASE_DIR, 'dm/templates'),
                  ]
         ,
         'APP_DIRS': True,

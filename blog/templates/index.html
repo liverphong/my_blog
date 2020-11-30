@@ -7,13 +7,27 @@
 {% endblock header %}
 {% block content %}
     <h2 style="text-align: center">
-        上善若水，厚德载物
+        笃学尚行，扬美崇善
     </h2>
     <a href="{% url 'dhcontent' %}">
     <h3 style="text-align: center ;color: aqua" >
         联系人查询系统入口
     </h3>
     </a>
-
+    <a href="{% url 'dm' %}">
+    <h4 style="text-align: center ;color:aqua">
+        点名系统
+    </h4>
+    </a>
+    <a href="{% url 'cj1' %}">
+    <h4 style="text-align: center ;color:aqua">
+        圆盘抽奖系统
+    </h4>
+    </a>
+    <a href="{% url 'cj2' %}">
+    <h4 style="text-align: center ;color:aqua">
+        九宫格抽奖系统
+    </h4>
+    </a>
 
 {% endblock content %}
